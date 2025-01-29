@@ -55,6 +55,6 @@ Answer: [Ollama's response with current information]
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.11+
 - Ollama installed and running
 - SearchAPI key (get from searchapi.io)
