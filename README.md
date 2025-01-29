@@ -1,6 +1,15 @@
-# Ollama Search Tool
+# Ollama Search Assistant
 
-A simple tool that searches the web using SearchAPI and summarizes results using Ollama's LLM.
+A smart search assistant that combines Ollama's LLM capabilities with web search functionality using function calling. The assistant can decide when to search the web for additional information to answer questions accurately.
+
+![Ollama Search Assistant](./images/Ollama_Search.gif)
+
+## Features
+
+- Function calling with Ollama
+- Web search integration via SearchAPI
+- Smart decision-making on when to use web search
+- Automatic summarization of search results
 
 ## Setup
 
@@ -10,27 +19,42 @@ A simple tool that searches the web using SearchAPI and summarizes results using
 pip install ollama python-dotenv requests
 ```
 
-2. Create `.env` file:
+2. Create `.env` file in project root:
 
 ```
 SEARCH_API_KEY=your_api_key_here
 ```
 
-3. Run:
+3. Ensure Ollama is running locally
+
+## Project Structure
+
+```
+.
+├── .env
+├── search_tool.py  # Search functionality and utilities
+└── main.py        # Main application logic
+```
+
+## Usage
+
+Run the assistant:
 
 ```bash
 python main.py
+```
+
+Example interaction:
+
+```
+What would you like to know? What's the latest research on quantum computing?
+Processing your question...
+Searching the web...
+Answer: [Ollama's response with current information]
 ```
 
 ## Requirements
 
 - Python 3.8+
 - Ollama installed and running
-- SearchAPI key
-
-## Usage
-
-```python
-python main.py
-What would you like to know? Who is Claude Shannon?
-```
+- SearchAPI key (get from searchapi.io)
